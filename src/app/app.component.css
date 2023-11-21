@@ -1,0 +1,14 @@
+.navBar{
+
+height: 70px;
+padding: 2rem;
+border-bottom: 2px solid #ccc;
+display: flex;
+justify-content: center;
+gap: 3rem;
+};
+
+a{
+text-decoration: none;
+color:inherit;
+}

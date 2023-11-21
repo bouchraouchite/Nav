@@ -1,0 +1,36 @@
+<p>facture works!</p>
+
+<div class="container">
+<form #form="ngForm" (ngSubmit)="supprimerFacture()">
+
+    <div class="container">
+
+        <div class="inputWrapper">
+            <label for="num_facture"> Num Facture</label>
+
+            <input [(ngModel)]="factureid" type="number" name="factureid">
+        </div>
+    </div>
+    <button type="submit"> Supprimer </button>
+
+</form>
+    <h1>Liste Facture</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Numero Facture </th>
+            <th scope="col">Date Facture </th>
+            <th scope="col">Montant Facture</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let f of factures">
+            <th>{{f.id}}</th>
+            <th>{{f.datefacture}}</th>
+            <th>{{f.montant}}</th>
+
+          </tr>
+       
+        </tbody>
+      </table>
+</div>
